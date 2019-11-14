@@ -3,10 +3,12 @@
     top: calc(50vh - 303px);
   }
   
-  .block-row {
-    float: left;
+  .center {
+      display: flex;
+      align-items: center;
+      justify-content: center;
   }
-  
+
   .block {
     width: 200px;
     height: 200px;
@@ -15,37 +17,37 @@
   }
   
   .red {
-    background-color: red;
+    background-color: white;
   }
   
   .blue {
-    background-color: blue;
+    background-color: white;
   }
   
   .green {
-    background-color: green;
+    background-color: white;
   }
   
   .yellow {
-    background-color: yellow;
+    background-color: white;
   }
   
   .salmon {
-    background-color: salmon;
+    background-color: white;
   }
   
   .indigo {
-    background-color: indigo;
+    background-color: white;
   }
   
   .purple {
-    background-color: purple;
+    background-color: white;
   }
   
   .violet {
-    background-color: violet;
+    background-color: white;
   }
   
   .lime {
-    background-color: lime;
+    background-color: white;
   }
