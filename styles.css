@@ -1,0 +1,51 @@
+#block-container {
+    position: absolute;
+    top: calc(50vh - 303px);
+  }
+  
+  .block-row {
+    float: left;
+  }
+  
+  .block {
+    width: 200px;
+    height: 200px;
+    border: 1px black solid;
+    float: left;
+  }
+  
+  .red {
+    background-color: red;
+  }
+  
+  .blue {
+    background-color: blue;
+  }
+  
+  .green {
+    background-color: green;
+  }
+  
+  .yellow {
+    background-color: yellow;
+  }
+  
+  .salmon {
+    background-color: salmon;
+  }
+  
+  .indigo {
+    background-color: indigo;
+  }
+  
+  .purple {
+    background-color: purple;
+  }
+  
+  .violet {
+    background-color: violet;
+  }
+  
+  .lime {
+    background-color: lime;
+  }
