@@ -62,6 +62,7 @@ document.querySelector('.block9').onclick = function() {
   }
 }
 
+/*function mold() { */
 let randomNumber = Math.floor(Math.random()*9);
 console.log(randomNumber);
 
@@ -84,5 +85,10 @@ if (randomNumber === 0) {
 } else {
     document.querySelector('.block9').style.background = 'black';
 }
-    
+/* } */
+ 
+// need to be fixed & be on repeat//
+
+
+
     
