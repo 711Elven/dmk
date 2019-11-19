@@ -11,13 +11,15 @@ document.querySelector('.block2').onclick = function() {
     document.querySelector('.block2').style.background = 'white';
     styled2 = true;
   }
-}let styled3 = false;
+}
+let styled3 = false;
 document.querySelector('.block3').onclick = function() {
   if (!styled3) {
     document.querySelector('.block3').style.background = 'white';
     styled3 = true;
   }
-}let styled4 = false;
+}
+let styled4 = false;
 document.querySelector('.block4').onclick = function() {
   if (!styled4) {
     document.querySelector('.block4').style.background = 'white';
@@ -37,13 +39,15 @@ document.querySelector('.block6').onclick = function() {
     document.querySelector('.block6').style.background = 'white';
     styled6 = true;
   }
-}let styled7 = false;
+}
+let styled7 = false;
 document.querySelector('.block7').onclick = function() {
   if (!styled7) {
     document.querySelector('.block7').style.background = 'white';
     styled7 = true;
   }
-}let styled8 = false;
+}
+let styled8 = false;
 document.querySelector('.block8').onclick = function() {
   if (!styled8) {
     document.querySelector('.block8').style.background = 'white';
@@ -58,27 +62,27 @@ document.querySelector('.block9').onclick = function() {
   }
 }
 
-let randomNumber = (Math.floor(Math.random()*8));
-
+let randomNumber = Math.floor(Math.random()*9);
 console.log(randomNumber);
+
 if (randomNumber === 0) {
-  console.log('Without a doubt.');
+    document.querySelector('.block1').style.background = 'black';
 } else if (randomNumber === 1) {
-  console.log('Outlook good.');
+    document.querySelector('.block2').style.background = 'black';
 } else if (randomNumber === 2) {
-  console.log('Better not tell you now.');
+    document.querySelector('.block3').style.background = 'black';
 } else if (randomNumber === 3) {
-  console.log('My reply is no.'); 
+    document.querySelector('.block4').style.background = 'black';
 } else if (randomNumber === 4) {
-  console.log('Ask again later.');
+    document.querySelector('.block5').style.background = 'black';
 } else if (randomNumber === 5) {
-  console.log("Can't predict now.");
+    document.querySelector('.block6').style.background = 'black';
 } else if (randomNumber === 6) {
-  console.log('My sources say no.');
+    document.querySelector('.block7').style.background = 'black';
 } else if (randomNumber === 7) {
-  console.log('Very doubtful.');
+    document.querySelector('.block8').style.background = 'black';
 } else {
-  console.log('Concentrate and ask again.');
+    document.querySelector('.block9').style.background = 'black';
 }
     
-  
+    
