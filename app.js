@@ -112,18 +112,9 @@ function mold() {
   }
 
 } 
+mold();
 
- mold();
- mold();
-
- var blocks = ['.block1', '.block2', '.block3', '.block4', '.block5', '.block6', '.block7', '.block8', '.block9']
- 
- function dontSelectWhite() {
-  //  if ()
- }
-// need to be fixed & be on repeat//
-
-
-
-    // if style = false, then on click don't do anything
-    // array = i, i++
+var count = 60, timer = setInterval(function() {
+  $("#counter").html(count--);
+  if(count == 1) clearInterval(timer);
+}, 1000);
