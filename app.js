@@ -1,94 +1,129 @@
 let styled = false;
 document.querySelector('.block1').onclick = function() {
-  if (!styled) {
+  if (styled) {
     document.querySelector('.block1').style.background = 'white';
-    styled = true;
+    mold();
+    styled = false;
   }
 }
 let styled2 = false;
 document.querySelector('.block2').onclick = function() {
-  if (!styled2) {
+  if (styled2) {
     document.querySelector('.block2').style.background = 'white';
-    styled2 = true;
+    mold();
+    styled2 = false;
   }
 }
 let styled3 = false;
 document.querySelector('.block3').onclick = function() {
-  if (!styled3) {
+  if (styled3) {
     document.querySelector('.block3').style.background = 'white';
-    styled3 = true;
+    mold();
+    styled3 = false;
   }
 }
 let styled4 = false;
 document.querySelector('.block4').onclick = function() {
-  if (!styled4) {
+  if (styled4) {
     document.querySelector('.block4').style.background = 'white';
-    styled4 = true;
+    mold();
+    styled4= false;
   }
 }
 let styled5 = false;
 document.querySelector('.block5').onclick = function() {
-  if (!styled5) {
+  if (styled5) {
     document.querySelector('.block5').style.background = 'white';
-    styled5 = true;
+    mold();
+    styled5 = false;
   }
 }
 let styled6 = false;
 document.querySelector('.block6').onclick = function() {
-  if (!styled6) {
+  if (styled6) {
     document.querySelector('.block6').style.background = 'white';
-    styled6 = true;
+    mold();
+    styled6 = false;
   }
 }
 let styled7 = false;
 document.querySelector('.block7').onclick = function() {
-  if (!styled7) {
+  if (styled7) {
     document.querySelector('.block7').style.background = 'white';
-    styled7 = true;
+    mold();
+    styled7 = false;
   }
 }
 let styled8 = false;
 document.querySelector('.block8').onclick = function() {
-  if (!styled8) {
+  if (styled8) {
     document.querySelector('.block8').style.background = 'white';
-    styled8 = true;
+    mold();
+    styled8 = false;
   }
 }
 let styled9 = false;
 document.querySelector('.block9').onclick = function() {
-  if (!styled9) {
+  if (styled9) {
     document.querySelector('.block9').style.background = 'white';
-    styled9 = true;
+    mold();
+    styled9 = false;
   }
 }
 
-/*function mold() { */
+let previousRandomNumber;
 let randomNumber = Math.floor(Math.random()*9);
-console.log(randomNumber);
 
-if (randomNumber === 0) {
-    document.querySelector('.block1').style.background = 'black';
-} else if (randomNumber === 1) {
-    document.querySelector('.block2').style.background = 'black';
-} else if (randomNumber === 2) {
-    document.querySelector('.block3').style.background = 'black';
-} else if (randomNumber === 3) {
-    document.querySelector('.block4').style.background = 'black';
-} else if (randomNumber === 4) {
-    document.querySelector('.block5').style.background = 'black';
-} else if (randomNumber === 5) {
-    document.querySelector('.block6').style.background = 'black';
-} else if (randomNumber === 6) {
-    document.querySelector('.block7').style.background = 'black';
-} else if (randomNumber === 7) {
-    document.querySelector('.block8').style.background = 'black';
-} else {
-    document.querySelector('.block9').style.background = 'black';
-}
-/* } */
+function mold() { 
+  previousRandomNumber = randomNumber;
+  console.log(randomNumber);
+
+  while (randomNumber === previousRandomNumber) {
+    randomNumber = Math.floor(Math.random()*9);
+  }
+
+  if (randomNumber === 0) {
+      document.querySelector('.block1').style.background = 'black';
+      styled = true;
+  } else if (randomNumber === 1) {
+      document.querySelector('.block2').style.background = 'black';
+      styled2 = true;
+  } else if (randomNumber === 2) {
+      document.querySelector('.block3').style.background = 'black';
+      styled3 = true;
+  } else if (randomNumber === 3) {
+      document.querySelector('.block4').style.background = 'black';
+      styled4 = true;
+  } else if (randomNumber === 4) {
+      document.querySelector('.block5').style.background = 'black';
+      styled5 = true;
+  } else if (randomNumber === 5) {
+      document.querySelector('.block6').style.background = 'black';
+      styled6 = true;
+  } else if (randomNumber === 6) {
+      document.querySelector('.block7').style.background = 'black';
+      styled7 = true;
+  } else if (randomNumber === 7) {
+      document.querySelector('.block8').style.background = 'black';
+      styled8 = true;
+  } else {
+      document.querySelector('.block9').style.background = 'black';
+      styled9 = true;
+  }
+
+} 
+
+ mold();
+ mold();
+
+ var blocks = ['.block1', '.block2', '.block3', '.block4', '.block5', '.block6', '.block7', '.block8', '.block9']
  
+ function dontSelectWhite() {
+  //  if ()
+ }
 // need to be fixed & be on repeat//
 
 
 
-    
+    // if style = false, then on click don't do anything
+    // array = i, i++
