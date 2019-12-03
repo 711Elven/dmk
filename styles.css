@@ -1,12 +1,19 @@
 #block-container {
     position: absolute;
-    top: calc(50vh - 303px);
+    top: calc(50vh - 290px);
   }
-  
+
+
   .center {
       display: flex;
       align-items: center;
       justify-content: center;
+  }
+  .right{
+    display: flex;
+    align-items: flex-end;
+    justify-content: right; 
+
   }
 
   .block {
@@ -52,4 +59,12 @@
     background-color: white;
   }
 
+  .alarm {
+
+    font-size: 80px;
+
+  }
   
+  #value {
+    font-size: 50px;
+  }

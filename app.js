@@ -1,9 +1,13 @@
 let styled = false;
+let value = 0;
+document.querySelector('#value').innerHTML = value.toString();
 document.querySelector('.block1').onclick = function() {
   if (styled) {
     document.querySelector('.block1').style.background = 'white';
     mold();
     styled = false;
+    value++;
+    document.querySelector('#value').innerHTML = value.toString();
   }
 }
 let styled2 = false;
@@ -12,6 +16,8 @@ document.querySelector('.block2').onclick = function() {
     document.querySelector('.block2').style.background = 'white';
     mold();
     styled2 = false;
+    value++;
+    document.querySelector('#value').innerHTML = value.toString();
   }
 }
 let styled3 = false;
@@ -20,6 +26,8 @@ document.querySelector('.block3').onclick = function() {
     document.querySelector('.block3').style.background = 'white';
     mold();
     styled3 = false;
+    value++;
+    document.querySelector('#value').innerHTML = value.toString();
   }
 }
 let styled4 = false;
@@ -28,6 +36,8 @@ document.querySelector('.block4').onclick = function() {
     document.querySelector('.block4').style.background = 'white';
     mold();
     styled4= false;
+    value++;
+    document.querySelector('#value').innerHTML = value.toString();
   }
 }
 let styled5 = false;
@@ -36,6 +46,8 @@ document.querySelector('.block5').onclick = function() {
     document.querySelector('.block5').style.background = 'white';
     mold();
     styled5 = false;
+    value++;
+    document.querySelector('#value').innerHTML = value.toString();
   }
 }
 let styled6 = false;
@@ -44,6 +56,8 @@ document.querySelector('.block6').onclick = function() {
     document.querySelector('.block6').style.background = 'white';
     mold();
     styled6 = false;
+    value++;
+    document.querySelector('#value').innerHTML = value.toString();
   }
 }
 let styled7 = false;
@@ -52,6 +66,8 @@ document.querySelector('.block7').onclick = function() {
     document.querySelector('.block7').style.background = 'white';
     mold();
     styled7 = false;
+    value++;
+    document.querySelector('#value').innerHTML = value.toString();
   }
 }
 let styled8 = false;
@@ -60,6 +76,8 @@ document.querySelector('.block8').onclick = function() {
     document.querySelector('.block8').style.background = 'white';
     mold();
     styled8 = false;
+    value++;
+    document.querySelector('#value').innerHTML = value.toString();
   }
 }
 let styled9 = false;
@@ -68,6 +86,8 @@ document.querySelector('.block9').onclick = function() {
     document.querySelector('.block9').style.background = 'white';
     mold();
     styled9 = false;
+    value++;
+    document.querySelector('#value').innerHTML = value.toString();
   }
 }
 
@@ -113,3 +133,44 @@ function mold() {
 
 } 
 mold();
+
+function startTimer(duration, display) {
+  var start = Date.now(),
+      diff,
+      minutes,
+      seconds;
+  function timer() {
+      // get the number of seconds that have elapsed since 
+      // startTimer() was called
+      diff = duration - (((Date.now() - start) / 1000) | 0);
+
+      // does the same job as parseInt truncates the float
+      minutes = (diff / 60) | 0;
+      seconds = (diff % 60) | 0;
+
+      minutes = minutes < 10 ? "0" + minutes : minutes;
+      seconds = seconds < 10 ? "0" + seconds : seconds;
+
+      display.textContent = minutes + ":" + seconds; 
+
+      if (diff <= 0) {
+          // add one second so that the count down starts at the full duration
+          // example 05:00 not 04:59
+          start = Date.now() + 1000;
+          alert('You lose. Refresh to play again.');
+      }
+  };
+  // we don't want to wait a full second before the timer starts
+  timer();
+  setInterval(timer, 1000);
+}
+
+window.onload = function () {
+  var fiveMinutes = 60 * 5,
+      display = document.querySelector('#time');
+  startTimer(fiveMinutes, display);
+};
+
+
+// Grid to help re-position the score
+// Styling if u want
