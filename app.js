@@ -1,5 +1,6 @@
 let styled = false;
 let value = 0;
+
 document.querySelector('#value').innerHTML = value.toString();
 document.querySelector('.block1').onclick = function() {
   if (styled) {
@@ -157,7 +158,12 @@ function startTimer(duration, display) {
           // add one second so that the count down starts at the full duration
           // example 05:00 not 04:59
           start = Date.now() + 1000;
-          alert('You lose. Refresh to play again.');
+          alert('Game Over! Refresh the page to play again.');
+          
+          value = 0;
+          document.querySelector('#value').innerHTML = value.toString();
+         
+
       }
   };
   // we don't want to wait a full second before the timer starts
@@ -166,7 +172,7 @@ function startTimer(duration, display) {
 }
 
 window.onload = function () {
-  var fiveMinutes = 60 * 5,
+  var fiveMinutes = 60 * 0.5,
       display = document.querySelector('#time');
   startTimer(fiveMinutes, display);
 };
